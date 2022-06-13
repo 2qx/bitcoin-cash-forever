@@ -40,7 +40,7 @@ class BitcoinForever extends Command {
 const cli = new Cli({
   binaryName: 'bitcoin-cash-forever',
   binaryLabel: 'bitcoin-cash-forever',
-  binaryVersion: '0.0.2'
+  binaryVersion: '0.0.3'
 });
 
 cli.register(BitcoinForever);

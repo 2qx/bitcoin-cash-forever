@@ -1,10 +1,10 @@
 # bitcoin-cash-forever 
 
-An simple on-chain perpetuity contract for bitcoin cash.
+A simple on-chain perpetuity contract for bitcoin cash.
 
 ## 🐉🐉 pre-alpha release disclaimer 🐉🐉
 
-**This is a brand new contract, using brand new features of bitcoin cash.**
+**This is a brand new contract, using brand new features of bitcoin cash. [2022-06]**
 
 **Please _DO NOT_ load your life savings on it.**
 
@@ -65,8 +65,13 @@ If the funds are spendable, they'll be spend if all the same parameters are pass
 
 If there are issues with the fees, a custom fee may be provided with the `--fee` override. 
 
+👇 Support the tor project by trying the command below. Actually, this is a real contract with real money on it. 👇
+
+👇 DO IT! No wallet necessary, try to execute this contract 👇
+
     npx bitcoin-cash-forever --address bitcoincash:qrtyy8w9yv6ffqtny9gp56m8kztl3nwwzcqyzsv32k
-  
+
+🤞  
 
     Alpha Software. DON'T PUT YOUR LIFE SAVINGS ON THIS CONTRACT!!! 
     # Perpetuity to pay 1/120 total, every 4000 blocks, after a 3400 (sat) executor allowance

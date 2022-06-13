@@ -61,13 +61,12 @@ Since the default parameters seem fine, once the contract is funded, it can be s
 
 ## 2. Executing the Contract
 
-If the funds are spendable, they'll be spend if all the same parameters are passed again.  **Remember to take a liitle something for your troubles** with the `--exAddress` contract as the executor of this contract. 
+If the funds are spendable, they'll be spent if all the same parameters are passed again.  **Remember to take a liitle something for your troubles** with the `--exAddress` contract as the executor of this contract. 
 
-If there are issues with the fees, a custom fee may be provided with the `--fee` override. 
 
-👇 Support the tor project by trying the command below. Actually, this is a real contract with real money on it. 👇
+👇 You can support the tor project by trying the command below. Actually, this is a real contract with real money on it. 👇
 
-👇 DO IT! No wallet necessary, try to execute this contract 👇
+👇 No wallet necessary, try to execute this contract 👇
 
     npx bitcoin-cash-forever --address bitcoincash:qrtyy8w9yv6ffqtny9gp56m8kztl3nwwzcqyzsv32k
 

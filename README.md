@@ -31,7 +31,7 @@ Starting with one coin, the monthly installments would look something like this:
 
 ![Monthly Installments](./assets/1bch_120_4000sat_monthly_installments.png)
 
-The worksheet to make this graphs has been included in the exclude/ folder.
+The ods worksheet to make these graphs is [included in the source repo](./exclude/Worksheet.ods).
 
 # Installing
 
@@ -43,7 +43,7 @@ In your preferred node environment, run your version of:
 
    A full list of parameters is given with the `-h` flag.
 
-### Creating the contract
+### 1. Creating the contract
 
 To create a new perpetuity with the default parameters, simply provide a receiving address:
 
@@ -58,6 +58,12 @@ Which will return the new address for the contract with the balance and info:
     contract principal:         0
 
 Since the default parameters seem fine, once the contract is funded, it can be spent about once every 4000 blocks or 27.7 days. 
+
+## 2. Executing the Contract
+
+If the funds are spendable, they'll be spend if all the same parameters are passed again.  **Remember to take a liitle something for your troubles** with the `--exAddress` contract as the executor of this contract. 
+
+If there are issues with the fees, a custom fee may be provided with the `--fee` override. 
 
     npx bitcoin-cash-forever --address bitcoincash:qrtyy8w9yv6ffqtny9gp56m8kztl3nwwzcqyzsv32k
   
@@ -74,7 +80,7 @@ Since the default parameters seem fine, once the contract is funded, it can be s
 
 ## Abusing
 
-If when attempting to call the contract before the timelock has expired, an error will be returned.
+When attempting to call the contract before the timelock has expired, an error should be returned.
 
     Internal Error: Transaction failed with reason: the transaction was rejected by network rules.
 
@@ -86,7 +92,7 @@ with the accompanying [meep debugging](https://github.com/gcash/meep) code:
 
 ## Testing
 
-When using the `--testnet` flag, the default parameters are git sped up a bit, with the contract paying every block and paying 12.5% of the remaining balance each time.
+When using the `--testnet` flag, the default parameters are sped up a bit, with the contract paying every block and paying 12.5% of the remaining balance each time.
 
     # Perpetuity to pay 1/8 total, every 1 blocks, after a 3400 (sat) executor allowance
 

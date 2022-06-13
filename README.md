@@ -61,7 +61,7 @@ Since the default parameters seem fine, once the contract is funded, it can be s
 
 ## 2. Executing the Contract
 
-If the funds are spendable, they'll be spent if all the same parameters are passed again.  **Remember to take a liitle something for your troubles** with the `--exAddress` contract as the executor of this contract. 
+If the funds are spendable, they'll be spent if all the same parameters are passed again.  **Remember to take a little something for your troubles** with the `--exAddress` contract as the executor of this contract. 
 
 
 👇 You can support the tor project by trying the command below. Actually, this is a real contract with real money on it. 👇

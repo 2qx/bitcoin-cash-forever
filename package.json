@@ -1,0 +1,43 @@
+{
+  "name": "bitcoin-cash-forever",
+  "version": "0.0.1",
+  "description": "A bitcoin perpetuity utility",
+  "type":"module",
+  "bin": "npx.cjs",
+  "dependencies": {
+    "@bitauth/libauth": "^1.19.1",
+    "@swc/core": "latest",
+    "@swc/helpers": "latest",
+    "@tsconfig/node16-strictest-esm": "latest",
+    "cashc": "^0.7.1",
+    "cashscript": "^0.7.1",
+    "clipanion": "^3.2.0-rc.11",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "exclude":[
+    "exclude/"  
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2qx/bitcoin-cash-forever.git"
+  },
+  "author": "-",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/2qx/bitcoin-cash-forever/issues"
+  },
+  "homepage": "https://github.com/2qx/bitcoin-cash-forever#readme",
+  "keywords": [
+    "bitcoin",
+    "bitcoin cash",
+    "bch",
+    "tBCH",
+    "cashscript",
+    "testnet",
+    "perpetuity"
+]
+}

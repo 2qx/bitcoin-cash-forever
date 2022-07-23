@@ -2,7 +2,7 @@
 
 A simple on-chain perpetuity contract for bitcoin cash.
 
-## 🐉🐉 pre-alpha release disclaimer 🐉🐉
+## 🐉 pre-alpha release disclaimer 🐉
 
 **This is a brand new contract, using brand new features of bitcoin cash. [2022-06]**
 
@@ -14,7 +14,7 @@ This contract has not undergone any kind of peer-review or security audit. It is
 
 There is absolutely NO way to recover funds if the initial address is incorrect or compromised far into the future.
 
-  🐉 🐉  🐉 🐉  🐉 🐉  🐉 🐉  🐉 🐉  🐉 🐉  🐉 🐉  🐉 🐉
+  🐉 🐉  🐉 🐉  🐉 🐉  🐉 🐉  🐉 🐉  🐉 🐉  🐉 🐉  🐉 
 
 # Introduction
 
@@ -49,6 +49,7 @@ To create a new perpetuity with the default parameters, simply provide a receivi
 
     npx bitcoin-cash-forever --address bitcoincash:qrtyy8w9yv6ffqtny9gp56m8kztl3nwwzcqyzsv32k
 
+**Note:** the provided address must be a P2PKH address. The command will fail if a P2SH (contract) address is provided.
 
 Which will return the new address for the contract with the balance and info:
 
@@ -68,7 +69,7 @@ If the funds are spendable, they'll be spent if all the same parameters are pass
 
 👇 No wallet necessary, try to execute this contract 👇
 
-    npx bitcoin-cash-forever --address bitcoincash:qrtyy8w9yv6ffqtny9gp56m8kztl3nwwzcqyzsv32k
+    npx bitcoin-cash-forever --address bitcoincash:qrtyy8w9yv6ffqtny9gp56m8kztl3nwwzcqyzsv32k --exAddress <YOUR CASHADDR HERE>
 
 🤞  
 

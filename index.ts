@@ -5,7 +5,8 @@ import { compileString } from "cashc";
 import { TransactionDetails } from 'cashscript/dist/module/interfaces';
 
 import { perpetuityContract } from "./perpetuity.ts"
-import { derivePublicKeyHash } from "./util.ts"
+import { derivePublicKeyHash, assurePkh } from "./util.ts"
+
 
 
 export async function getContract(isTestnet:boolean, period: number, address:string, allowance:number, decay:number): Promise<Contract> {
@@ -17,7 +18,7 @@ export async function getContract(isTestnet:boolean, period: number, address:str
   // Initialise a network provider for network operations
 
   const provider = isTestnet ? new ElectrumNetworkProvider('staging') : new ElectrumNetworkProvider('mainnet');
-
+  assurePkh(address)
   let recipientPkh = derivePublicKeyHash(address)
   let contract =  new Contract(script, [period, recipientPkh, allowance, decay], provider);
   console.log(`# Perpetuity to pay 1/${decay} total, every ${period} blocks, after a ${allowance} (sat) executor allowance`)

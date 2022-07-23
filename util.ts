@@ -1,7 +1,18 @@
 import {
+    decodeCashAddress,
     decodeCashAddressFormat,
     decodeCashAddressFormatWithoutPrefix,
+    CashAddressVersionByte
   } from "@bitauth/libauth";
+
+
+
+export function assurePkh(address: string){
+  let cashaddrInfo = decodeCashAddress(address)
+  if(typeof cashaddrInfo === "string") throw Error(cashaddrInfo)
+  if(cashaddrInfo.type!=CashAddressVersionByte.P2PKH) throw ("Provided address was not a pay to public key hash address")
+}
+
 
 /**
  * Helper function to convert an address to a public key hash
